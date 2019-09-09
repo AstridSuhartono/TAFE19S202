@@ -318,7 +318,7 @@ namespace StartFinance.Views
         private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int num = pagecontent.SelectedIndex;
-            if(num == 0)
+            if (num == 0)
             {
                 InternFooter.Visibility = Visibility.Collapsed;
                 pageFooter.Visibility = Visibility.Visible;

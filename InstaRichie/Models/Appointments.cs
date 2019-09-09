@@ -16,25 +16,33 @@
 //along with Start Finance.If not, see<http://www.gnu.org/licenses/>.
 // ***************************************************************************
 
+using SQLite.Net.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SQLite.Net.Attributes;
 
 namespace StartFinance.Models
 {
-    public class WishList
+    public class Appointments
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
         [Unique]
-        public string WishName { get; set; }
+        public string EventName { get; set; }
 
         [NotNull]
-        public double Money { get; set; }
+        public string Location { get; set; }
 
+        [NotNull]
+        public DateTime EventDate { get; set; }
+
+        [NotNull]
+        public TimeSpan StartTime { get; set; }
+
+        [NotNull]
+        public TimeSpan EndTime { get; set; }
     }
 }

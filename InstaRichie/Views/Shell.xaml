@@ -25,7 +25,7 @@
                                Text="DashBoard" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
-            
+
             <!--  Transaction List button  -->
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:TransactionListPage" 
                                           AutomationProperties.Name="Jerry"
@@ -86,7 +86,6 @@
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
 
-
             <!--  Wish List button  -->
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:WishListPage" 
                                           AutomationProperties.Name="Jerry"
@@ -98,7 +97,48 @@
                                Text="WishList" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
+
+            <!-- Appointments button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:AppointmentsPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="Calendar" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Appointments" />
+                </StackPanel>
+            </Controls:HamburgerButtonInfo>
+
+            <!--  Contact button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:ContactPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="Contact" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Contact" />
+                </StackPanel>
+            </Controls:HamburgerButtonInfo>
+
+            <!--  Wish Personal button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:PersonalPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="People" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Personal" />
+                </StackPanel>
+            </Controls:HamburgerButtonInfo>
+
         </Controls:HamburgerMenu.PrimaryButtons>
+        
+        
+        
+        
 
         <Controls:HamburgerMenu.SecondaryButtons>
             <!--  settingspage button  -->

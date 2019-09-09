@@ -1,40 +1,27 @@
-﻿<!--
-    Start Finance - An to manage your personal finances.
-    
-    Start Finance is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    Start Finance is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-    You should have received a copy of the GNU General Public License
-    along with Start Finance.  If not, see <http://www.gnu.org/licenses/>.
-
--->
-
-<Page
-    x:Class="StartFinance.Views.AssetsPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:Behaviors="using:Template10.Behaviors"
-      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
-      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
-      xmlns:controls="using:Template10.Controls"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="using:StartFinance.Views"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      Loaded="Page_Loaded"
-      xmlns:vm="using:StartFinance.ViewModels" mc:Ignorable="d">
+﻿<Page
+	x:Class="StartFinance.Views.PersonalPage"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:Behaviors="using:Template10.Behaviors"
+	  xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+	  xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+	  xmlns:controls="using:Template10.Controls"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  xmlns:local="using:StartFinance.Views"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  Loaded="Page_Loaded"
+	  xmlns:vm="using:StartFinance.ViewModels" mc:Ignorable="d">
 
     <Page.Resources>
-        <DataTemplate x:Key="AssetListDatavalue">
+        <DataTemplate x:Key="PersonalDatavalue">
             <Grid>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{Binding ID}" Padding="0,0,15,0"/>
-                    <TextBlock Text="{Binding AssetName}" Padding="0,0,15,0"/>
-                    <TextBlock Text="{Binding AssetValue}" Padding="0,0,15,0"/>
+                    <TextBlock Text="{Binding FirstName}" Padding="0,0,15,0"/>
+                    <TextBlock Text="{Binding LastName}" Padding="0,0,15,0"/>
+                    <TextBlock Text="{Binding DOB}" Padding="0,0,15,0"/>
+                    <TextBlock Text="{Binding Email}" Padding="0,0,15,0"/>
+                    <TextBlock Text="{Binding MobileNumber}" Padding="0,0,15,0"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -96,8 +83,10 @@
 
             <!--  secondary commands  -->
             <controls:PageHeader.PrimaryCommands>
-                <AppBarButton Icon="Add" Label="Add Asset" Click="AddData" />
-                <AppBarButton Icon="Delete" Label="Delete Asset" Click="DeleteAccout_Click" />
+                <AppBarButton x:Name="btnAdd" Icon="Add" Label="Add Information" Click="AddData" />
+                <AppBarButton x:Name="btnUpdate" Icon="Edit" Label="Update Information" Click="UpdateData" />
+                <AppBarButton x:Name="btnDelte" Icon="Delete" Label="Delete Information" Click="DeleteAccout_Click" />
+                <AppBarButton x:Name="btnSave" Icon="Save" Label="Save Information" Click="SaveAccout_Click" />
             </controls:PageHeader.PrimaryCommands>
 
         </controls:PageHeader>
@@ -106,21 +95,25 @@
         <Pivot>
             <RelativePanel.Below>pageHeader</RelativePanel.Below>
             <RelativePanel.Above>pageFooter</RelativePanel.Above>
-            <PivotItem Header="Assets">
+            <PivotItem Header="Personal">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="302"/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <StackPanel x:Name="pageStart" Grid.Row="0" VerticalAlignment="Top"
-                                HorizontalAlignment="Stretch"
-                                Orientation="Vertical" Margin="10,0,10,0">
-                        <TextBox x:Name="AssetNameText" PlaceholderText="Car, House, Valuables" Header="Asset Name"/>
-                        <TextBox x:Name="AssetValue" PlaceholderText="100.00" TextWrapping="Wrap" InputScope="Number" Header="Asset Value"/>
+								HorizontalAlignment="Stretch"
+								Orientation="Vertical" Margin="10,0,10,0" Height="300">
+                        <TextBox x:Name="tbxFirstName" PlaceholderText="First Name" IsReadOnly="True" Header="First Name"/>
+                        <TextBox x:Name="tbxLastName" PlaceholderText="Last Name" IsReadOnly="True" TextWrapping="Wrap" Header="Last Name"/>
+                        <CalendarDatePicker x:Name="cldDOB" Header="Date of Birth" IsEnabled="false" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        <TextBox x:Name="tbxEmail" PlaceholderText="Email" IsReadOnly="True" TextWrapping="Wrap" InputScope="Number" Header="Email"/>
+                        <TextBox x:Name="tbxMobile" PlaceholderText="Mobile" IsReadOnly="True" TextWrapping="Wrap" InputScope="Number" Header="Mobile"/>
+                        <!--<TextBox x:Name="tbxID" Visibility="Collapsed" />-->
                     </StackPanel>
-                    <ListView x:Name="AssetListView" Grid.Row="1" HorizontalAlignment="Stretch"
-                                VerticalAlignment="Stretch"
-                                ItemTemplate="{StaticResource AssetListDatavalue}">
+                    <ListView x:Name="PersonalInfoListView" Grid.Row="1" HorizontalAlignment="Stretch"
+								VerticalAlignment="Stretch"
+								ItemTemplate="{StaticResource PersonalDatavalue}">
                         <RelativePanel.Below>pageStart</RelativePanel.Below>
                     </ListView>
                 </Grid>
