@@ -35,6 +35,5 @@ namespace StartFinance.Models
 
         [NotNull]
         public string Mode { get; set; }
-
     }
 }

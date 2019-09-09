@@ -43,6 +43,5 @@ namespace StartFinance.Models
 
         [NotNull]
         public double Amount { get; set; }
-
     }
 }
