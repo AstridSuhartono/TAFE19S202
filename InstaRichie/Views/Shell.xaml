@@ -86,7 +86,6 @@
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
 
-
             <!--  Wish List button  -->
             <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:WishListPage" 
                                           AutomationProperties.Name="Jerry"
@@ -98,6 +97,7 @@
                                Text="WishList" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
+<<<<<<< HEAD
             <!--ShoppingListButton
             
             -->
@@ -107,11 +107,42 @@
                 		Symbol="Bullets" />
                     <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
                                Text="Shopping List" />
+=======
+
+            <!--  Contact button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:ContactPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="Contact" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Contact" />
+>>>>>>> remotes/origin/Astrid_Hyejin0.8
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
 
 
+<<<<<<< HEAD
+=======
+            <!--  Wish Personal button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:PersonalPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="People" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Personal" />
+                </StackPanel>
+            </Controls:HamburgerButtonInfo>
+
+>>>>>>> remotes/origin/Astrid_Hyejin0.8
         </Controls:HamburgerMenu.PrimaryButtons>
+        
+        
+        
+        
 
         <Controls:HamburgerMenu.SecondaryButtons>
             <!--  settingspage button  -->

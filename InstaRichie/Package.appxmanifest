@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+<<<<<<< HEAD
   <Identity Name="32458featapps.InstaRichie" Publisher="CN=001081307" Version="3.1.20.0" />
+=======
+  <Identity Name="32458featapps.InstaRichie" Publisher="CN=001083886" Version="3.1.20.0" />
+>>>>>>> remotes/origin/Astrid_Hyejin0.8
   <mp:PhoneIdentity PhoneProductId="55315fcf-abdd-4acd-aa68-afdab1b5cfbf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Start Finance</DisplayName>
