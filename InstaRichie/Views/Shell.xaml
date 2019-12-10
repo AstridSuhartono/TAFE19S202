@@ -85,6 +85,17 @@
                                Text="Accounts" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
+            <!--  Wish Personal button  -->
+            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:PersonalPage" 
+                                          AutomationProperties.Name="Jerry"
+                                          >
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Width="48" Height="48"
+                		Symbol="People" />
+                    <TextBlock Margin="12,0,0,0" VerticalAlignment="Center"
+                               Text="Personal" />
+                </StackPanel>
+            </Controls:HamburgerButtonInfo>
 
 
             <!--  Wish List button  -->
